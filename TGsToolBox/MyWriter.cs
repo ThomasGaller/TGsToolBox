@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text;
 
-namespace RenamerForTimelapsePictures
+namespace TGsToolBox
 {
     public static class MyWriter
     {

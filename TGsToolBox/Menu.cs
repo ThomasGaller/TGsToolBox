@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
 
-namespace RenamerForTimelapsePictures
+namespace TGsToolBox
 {
     public static class Menu
     {
-        private static readonly char[] NumOfOptions = {'0', '1', 'x'};
+        private static readonly char[] NumOfOptions = { '0', '1', 'x' };
 
         private static readonly string[] Logo =
         {

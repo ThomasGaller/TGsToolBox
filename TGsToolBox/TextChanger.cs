@@ -2,8 +2,9 @@
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using TGsToolBox;
 
-namespace RenamerForTimelapsePictures
+namespace TGsToolBox
 {
     public static class TextChanger
     {

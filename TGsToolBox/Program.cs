@@ -1,8 +1,9 @@
 ﻿using System;
 using System.IO;
 using Newtonsoft.Json.Linq;
+using TGsToolBox;
 
-namespace RenamerForTimelapsePictures
+namespace TGsToolBox
 {
     internal class Program
     {

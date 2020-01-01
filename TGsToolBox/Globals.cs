@@ -1,4 +1,4 @@
-﻿namespace RenamerForTimelapsePictures
+﻿namespace TGsToolBox
 {
     public static class Globals
     {

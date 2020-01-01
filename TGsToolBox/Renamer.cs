@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace RenamerForTimelapsePictures
+namespace TGsToolBox
 {
     public static class Renamer
     {
