@@ -1,9 +1,7 @@
 ﻿using System;
 using System.IO;
-using Newtonsoft.Json.Linq;
-using TGsToolBox;
 
-namespace TGsToolBox
+namespace TGsToolbox
 {
     internal class Program
     {

@@ -1,4 +1,4 @@
-﻿namespace TGsToolBox
+﻿namespace TGsToolbox
 {
     public static class Globals
     {

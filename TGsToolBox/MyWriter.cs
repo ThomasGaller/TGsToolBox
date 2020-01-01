@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text;
 
-namespace TGsToolBox
+namespace TGsToolbox
 {
     public static class MyWriter
     {

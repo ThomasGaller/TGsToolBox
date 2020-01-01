@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace TGsToolBox
+namespace TGsToolbox
 {
     public static class Renamer
     {

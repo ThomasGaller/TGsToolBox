@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace TGsToolBox
+namespace TGsToolbox
 {
     public static class Menu
     {
