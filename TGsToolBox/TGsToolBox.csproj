@@ -4,7 +4,8 @@
         <OutputType>Exe</OutputType>
         <TargetFramework>netcoreapp3.0</TargetFramework>
         <RootNamespace>TGsToolbox</RootNamespace>
-        <Platforms>AnyCPU;x64</Platforms>
+        <Platforms>AnyCPU;x64;x86</Platforms>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
     </PropertyGroup>
 
     <ItemGroup>
