@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <Fragment>
+
+    <!-- Product Components -->
+    <ComponentGroup Id="ProductComponents">
+
+      <!-- Shortcut -->
+      <ComponentRef Id="MainAppShortcut" />
+
+      <!-- Icon -->
+      <ComponentRef Id="Icon" />
+
+      <!-- Registry Entries -->
+      <ComponentRef Id="RegistryEntries" />
+
+    </ComponentGroup>
+
+    <!-- Installed Files -->
+    <DirectoryRef Id="INSTALLFOLDER" FileSource="..\TGsToolBox\bin\Debug\netcoreapp3.0\win-$(var.Platform)\publish\">
+
+
+      
+      <!-- Shortcut to main application -->
+      <Component Id="MainAppShortcut" Guid="{EA991C2F-630C-43BE-B07A-664763C4597F}">
+
+        <Shortcut Id="MainAppShortcut" 
+                  Name="!(loc.ProductName_$(var.Platform))" 
+                  Target="[INSTALLFOLDER]TGsToolbox.exe" 
+                  Directory="InstallShortcutsMenuFolder"
+                  WorkingDirectory="INSTALLFOLDER"
+                  Icon="icon.ico"
+        />
+
+        <!-- Our unique key for this component/shortcut -->
+        <RegistryValue Id="RegShortcutKey" Root="HKCU" Key="SOFTWARE\!(loc.ProductFolderName)" Name="Shortcut" Value="1" Type="integer" KeyPath="yes"></RegistryValue>
+
+        <!-- Remove start menu items -->
+        <RemoveFolder Id="RemoveStartMenu" Directory="InstallShortcutsMenuFolder" On="uninstall"/>
+
+      </Component>
+
+    </DirectoryRef>
+
+    <!-- Product Folder -->
+    <DirectoryRef Id="INSTALLFOLDER" FileSource="..\TGsToolBox\">
+
+      <!-- Get Icon -->
+      <Component Id="Icon" Guid="{EC6C6D09-1C3C-4000-AB8F-822B681E7026}">
+        <File Id="IconFile" Name="app.ico" KeyPath="yes"/>
+      </Component>
+
+    </DirectoryRef>
+
+    <!-- Add Registry Entries --><!--
+    <DirectoryRef Id="TARGETDIR">
+
+      <Component Id="RegistryEntries" Guid="{4B41F7F7-EFC1-4FEE-BD04-EFEA27DA4C52}">
+
+        --><!-- Directory --><!--
+        <RegistryKey Root="HKCR"
+                     Key="Computer\HKEY_CLASSES_ROOT\Directory\shell\TGsToolBox"
+                     ForceCreateOnInstall="yes"
+                     ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="Icon" Value="Rename Images for Timelapse"/>
+          <RegistryValue Type="string" Name="(Default)" Value="[TARGETDIR]app.ico"/>
+        </RegistryKey>
+
+        <RegistryKey Root="HKCR"
+                     Key="Computer\HKEY_CLASSES_ROOT\Directory\shell\TGsToolBox\command"
+                     ForceCreateOnInstall="yes"
+                     ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="(Default)" Value="D:\Programs\TGsToolBox\TGsToolBox.exe true %1 1"/>
+        </RegistryKey>
+
+        --><!-- Directory Background --><!--
+        <RegistryKey Root="HKCR"
+                     Key="Computer\HKEY_CLASSES_ROOT\Directory\Background\shell\TGsToolBox"
+                     ForceCreateOnInstall="yes"
+                     ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="Icon" Value="Rename Images for Timelapse"/>
+          <RegistryValue Type="string" Name="(Default)" Value="[TARGETDIR]app.ico"/>
+        </RegistryKey>
+
+        <RegistryKey Root="HKCR"
+                     Key="Computer\HKEY_CLASSES_ROOT\Directory\Background\shell\TGsToolBox\command"
+                     ForceCreateOnInstall="yes"
+                     ForceDeleteOnUninstall="yes">
+          <RegistryValue Type="string" Name="(Default)" Value="D:\Programs\TGsToolBox\TGsToolBox.exe true %V 1"/>
+        </RegistryKey>
+
+      </Component>
+    </DirectoryRef>-->
+
+  </Fragment>
+
+</Wix>
