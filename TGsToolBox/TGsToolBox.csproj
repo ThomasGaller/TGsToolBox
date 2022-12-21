@@ -2,14 +2,14 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <RootNamespace>TGsToolbox</RootNamespace>
         <Platforms>AnyCPU;x64;x86</Platforms>
         <AssemblyVersion>0.1.0.0</AssemblyVersion>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     </ItemGroup>
 
 </Project>
